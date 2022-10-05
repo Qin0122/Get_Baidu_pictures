@@ -1,2 +1,11 @@
 # Get_Baidu_pictures
-Get Baidu pictures by multiple threads and round them
+## 代码功能
+用户可输入多种不同种类的图片名称、对应的图片数量、是否将图片变为圆形，代码根据用户输入的内容进行多线程爬取百度图片。
+## 使用模块
+- selenium模块：selenium是python的一个第三方库，对外提供的接口可以操控浏览器。本次使用该模块主要是用来控制滚动条进行网页的刷新，更新出更多的图片，再获取图片的跳转链接；
+- time模块：网页缓冲的作用；
+- requests模块：向图片跳转链接发送请求，获取真正的href（链接）
+- lxml模块：主要使用该模块中的etree函数，将html类型转换成element元素；
+- os模块：创建文件夹，供图片保存；
+- PIL模块：图像处理库，主要将爬取下来的图片剪裁成圆形
+- threading模块：利用此模块实现多线程操作。
